@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pixelart</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Pixelart</h1>
+        </header>
+
+        <main>
+            <aside>
+                <section>
+                    <span class="option-title">Tamanho:</span>
+                    <input
+                        class="input-size"
+                        type="number"
+                        min="4"
+                        value="10"
+                    />
+                </section>
+
+                
+                <section class="container-colors">
+                    <span class="option-title">Cores:</span>
+
+                    <!--Preto e branco-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #000000"
+                            data-color="#000000"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #808080"
+                            data-color="#808080"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #c0c0c0"
+                            data-color="#c0c0c0"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffffff"
+                            data-color="#ffffff"
+                        ></button>
+                    </section>
+
+                    <!--Vermelho-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #4b0000"
+                            data-color="#4b0000"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #8b0000"
+                            data-color="#8b0000"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #b22222"
+                            data-color="#b22222"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ff6347"
+                            data-color="#ff6347"
+                        ></button>
+                    </section>
+
+                    <!--Laranja-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #ff4800"
+                            data-color="#ff4800"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ff8c00"
+                            data-color="#ff8c00"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffa500"
+                            data-color="#ffa500"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffd447"
+                            data-color="#ffd447"
+                        ></button>
+                    </section>
+
+                    <!--Amarelo-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffd700"
+                            data-color="#ffd700"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffdf2c"
+                            data-color="#ffdf2c"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffe657"
+                            data-color="#ffe657"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffec82"
+                            data-color="#ffec82"
+                        ></button>
+                    </section>
+
+                    <!--Verde-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #004d00"
+                            data-color="#004d00"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #006400"
+                            data-color="#006400"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #228b22"
+                            data-color="#228b22"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #90ee90"
+                            data-color="#90ee90"
+                        ></button>
+                    </section>
+
+                    <!--Azul-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #00008b"
+                            data-color="#00008b"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #0000ff"
+                            data-color="#0000ff"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #4682b4"
+                            data-color="#4682b4"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #add8e6"
+                            data-color="#add8e6"
+                        ></button>
+                    </section>
+
+                    <!--Violeta-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #4b0082"
+                            data-color="#4b0082"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #6a0d91"
+                            data-color="#6a0d91"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #8a2be2"
+                            data-color="#8a2be2"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #dda0dd"
+                            data-color="#dda0dd"
+                        ></button>
+                    </section>
+
+                    <!--Rosa-->
+                    <section>
+                        <button
+                            class="button-color"
+                            style="background-color: #c71585"
+                            data-color="#c71585"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ff1493"
+                            data-color="#ff1493"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ff69b4"
+                            data-color="#ff69b4"
+                        ></button>
+                        <button
+                            class="button-color"
+                            style="background-color: #ffb3c0"
+                            data-color="#ffb3c0"
+                        ></button>
+                    </section>
+
+                    <input class="input-color" type="color" />
+                </section>
+
+                <button class="download-button">Baixar imagem</button>
+            </aside>
+
+            <section class="canvas"></section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
