@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixelart | Dev Rafael da Costa Silva</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+
+  <body>
+    <header class="home-header">
+      <a href="https://rafaelcostasilva1501.github.io/Mini-Game/">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </a>
+      <h1>Pixelart</h1>
+    </header>
+
+    <main>
+      <nav>
+        <div class="tool-box">
+          <abbr title="Pincel">
+            <button class="tool button-brush">
+              <span class="material-symbols-outlined">brush</span>
+            </button>
+          </abbr>
+
+          <abbr title="Borracha">
+            <button class="tool button-eraser">
+              <span class="material-symbols-outlined">ink_eraser</span>
+            </button>
+          </abbr>
+
+          <abbr title="Grid On/Off">
+            <button class="tool button-grid">
+              <span class="material-symbols-outlined">grid_on</span>
+            </button>
+          </abbr>
+
+          <abbr title="Download">
+            <button class="tool button-download">
+              <span class="material-symbols-outlined">download</span>
+            </button>
+          </abbr>
+
+          <abbr title="Selecionar cor">
+            <input type="color" class="tool input-color" />
+          </abbr>
+        </div>
+
+        <div class="tool-box box-color">
+          <div>
+            <button class="button-color" data-color="#1A1C2C"></button>
+            <button class="button-color" data-color="#B13E53"></button>
+            <button class="button-color" data-color="#FFCD75"></button>
+            <button class="button-color" data-color="#38B764"></button>
+            <button class="button-color" data-color="#29366F"></button>
+            <button class="button-color" data-color="#41A6F6"></button>
+            <button class="button-color" data-color="#F4F4F4"></button>
+            <button class="button-color" data-color="#566C86"></button>
+          </div>
+
+          <div>
+            <button class="button-color" data-color="#5D275D"></button>
+            <button class="button-color" data-color="#EF7D57"></button>
+            <button class="button-color" data-color="#A7F070"></button>
+            <button class="button-color" data-color="#257179"></button>
+            <button class="button-color" data-color="#3B5DC9"></button>
+            <button class="button-color" data-color="#73EFF7"></button>
+            <button class="button-color" data-color="#94B0C2"></button>
+            <button class="button-color" data-color="#333C57"></button>
+          </div>
+        </div>
+
+        <div class="tool-box box-size">
+          <button class="tool button-sub">
+            <span class="material-symbols-outlined">remove</span>
+          </button>
+
+          <input type="number" class="input-size" value="20" min="4" />
+
+          <button class="tool button-add">
+            <span class="material-symbols-outlined">add</span>
+          </button>
+        </div>
+      </nav>
+
+      <section>
+        <div class="canvas"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
