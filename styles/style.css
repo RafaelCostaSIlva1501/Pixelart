@@ -46,6 +46,8 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
+
+  background-size: cover;
 }
 
 nav {
@@ -162,8 +164,16 @@ section {
 }
 
 .canvas {
+  display: flex;
+  flex-direction: column;
+
+  aspect-ratio: 1;
+
   width: 450px;
-  height: 450px;
+
+  box-shadow: 0px 2px 10px black;
+
+  background-color: #131313;
 }
 
 .dimensions {
@@ -183,6 +193,8 @@ section {
 
 .pixel {
   width: 100%;
+
+  background-color: #f5f5f5;
 
   aspect-ratio: 1;
   user-select: none;
@@ -212,8 +224,5 @@ section {
 
   .box-color div {
     flex-direction: column;
-  }
-
-  .box-size {
   }
 }

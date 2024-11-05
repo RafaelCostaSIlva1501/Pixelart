@@ -76,7 +76,7 @@ const paintingPixel = (pixel) => {
     pixel.style.backgroundColor = selectColor.value; // Pinta o pixel com a cor selecionada
   } else if (pencil === "erase") {
     // Se a ferramenta selecionada for "erase" (borracha)
-    pixel.style.backgroundColor = "transparent";
+    pixel.style.backgroundColor = "#f5f5f5";
   }
 };
 
@@ -103,15 +103,19 @@ size.addEventListener("input", () => {
 grid.addEventListener("click", () => {
   gridON = !gridON;
 
-  const pixel = document.querySelectorAll(".pixel");
+  const row = document.querySelectorAll(".row");
 
   if (gridON) {
-    pixel.forEach((e) => {
-      e.style.margin = "1px 1px 0px 0px";
+    canvas.style.gap = "1px";
+
+    row.forEach((e) => {
+      e.style.gap = "1px";
     });
   } else {
-    pixel.forEach((e) => {
-      e.style.margin = "0px";
+    canvas.style.gap = "0px";
+    
+    row.forEach((e) => {
+      e.style.gap = "0px";
     });
   }
 });
@@ -120,7 +124,9 @@ canvas.addEventListener("mousedown", () => (isPaiting = true));
 
 canvas.addEventListener("mouseup", () => (isPaiting = false));
 
-canvas.addEventListener("mouseleave", () => {isPaiting = false})
+canvas.addEventListener("mouseleave", () => {
+  isPaiting = false;
+});
 
 colors.forEach((e) => {
   e.style.backgroundColor = e.dataset.color;
@@ -148,7 +154,3 @@ const downloadCanvas = () => {
 download.addEventListener("click", downloadCanvas);
 
 loadCanvas();
-
-
-
-
