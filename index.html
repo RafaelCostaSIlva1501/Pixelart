@@ -25,75 +25,72 @@
 
     <main>
       <nav>
-        <div class="tool-box">
-          <abbr title="Pincel">
-            <button class="tool button-brush">
-              <span class="material-symbols-outlined">brush</span>
-            </button>
-          </abbr>
+        <div>
+          <div class="tool-box">
+            <abbr title="Pincel">
+              <button class="tool button-brush">
+                <span class="material-symbols-outlined">brush</span>
+              </button>
+            </abbr>
 
-          <abbr title="Borracha">
-            <button class="tool button-eraser">
-              <span class="material-symbols-outlined">ink_eraser</span>
-            </button>
-          </abbr>
+            <abbr title="Borracha">
+              <button class="tool button-eraser">
+                <span class="material-symbols-outlined">ink_eraser</span>
+              </button>
+            </abbr>
 
-          <abbr title="Grid On/Off">
-            <button class="tool button-grid">
-              <span class="material-symbols-outlined">grid_on</span>
-            </button>
-          </abbr>
+            <abbr title="Grid On/Off">
+              <button class="tool button-grid">
+                <span class="material-symbols-outlined">grid_on</span>
+              </button>
+            </abbr>
 
-          <abbr title="Download">
-            <button class="tool button-download">
-              <span class="material-symbols-outlined">download</span>
-            </button>
-          </abbr>
+            <abbr title="Download">
+              <button class="tool button-download">
+                <span class="material-symbols-outlined">download</span>
+              </button>
+            </abbr>
 
-          <abbr title="Selecionar cor">
-            <input type="color" class="tool input-color" />
-          </abbr>
-        </div>
-
-        <div class="tool-box box-color">
-          <div>
-            <button class="button-color" data-color="#1A1C2C"></button>
-            <button class="button-color" data-color="#B13E53"></button>
-            <button class="button-color" data-color="#FFCD75"></button>
-            <button class="button-color" data-color="#38B764"></button>
-            <button class="button-color" data-color="#29366F"></button>
-            <button class="button-color" data-color="#41A6F6"></button>
-            <button class="button-color" data-color="#F4F4F4"></button>
-            <button class="button-color" data-color="#566C86"></button>
-          </div>
-
-          <div>
-            <button class="button-color" data-color="#5D275D"></button>
-            <button class="button-color" data-color="#EF7D57"></button>
-            <button class="button-color" data-color="#A7F070"></button>
-            <button class="button-color" data-color="#257179"></button>
-            <button class="button-color" data-color="#3B5DC9"></button>
-            <button class="button-color" data-color="#73EFF7"></button>
-            <button class="button-color" data-color="#94B0C2"></button>
-            <button class="button-color" data-color="#333C57"></button>
+            <abbr title="Selecionar cor">
+              <input type="color" class="tool input-color" />
+            </abbr>
           </div>
         </div>
 
-        <div class="tool-box box-size">
-          <button class="tool button-sub">
-            <span class="material-symbols-outlined">remove</span>
-          </button>
+        <div>
+          <div class="tool-box box-color">
+            <div>
+              <button class="button-color" data-color="#1A1C2C"></button>
+              <button class="button-color" data-color="#B13E53"></button>
+              <button class="button-color" data-color="#FFCD75"></button>
+              <button class="button-color" data-color="#38B764"></button>
+              <button class="button-color" data-color="#29366F"></button>
+              <button class="button-color" data-color="#41A6F6"></button>
+              <button class="button-color" data-color="#F4F4F4"></button>
+              <button class="button-color" data-color="#566C86"></button>
+            </div>
 
-          <input type="number" class="input-size" value="20" min="4" />
+            <div>
+              <button class="button-color" data-color="#5D275D"></button>
+              <button class="button-color" data-color="#EF7D57"></button>
+              <button class="button-color" data-color="#A7F070"></button>
+              <button class="button-color" data-color="#257179"></button>
+              <button class="button-color" data-color="#3B5DC9"></button>
+              <button class="button-color" data-color="#73EFF7"></button>
+              <button class="button-color" data-color="#94B0C2"></button>
+              <button class="button-color" data-color="#333C57"></button>
+            </div>
+          </div>
 
-          <button class="tool button-add">
-            <span class="material-symbols-outlined">add</span>
-          </button>
+          <div class="tool-box box-size">
+            <input type="range" class="input-size" min="4" value="20" />
+          </div>
         </div>
       </nav>
 
       <section>
         <div class="canvas"></div>
+        <span class="placeholder-size">32x32</span>
       </section>
     </main>
 

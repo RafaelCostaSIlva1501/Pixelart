@@ -8,9 +8,9 @@ const download = document.querySelector(".button-download");
 const selectColor = document.querySelector(".input-color");
 const colors = document.querySelectorAll(".button-color");
 
-const sub = document.querySelector(".button-sub");
-const add = document.querySelector(".button-add");
 const size = document.querySelector(".input-size");
+
+const placeholder = document.querySelector(".placeholder-size");
 
 let isPaiting = false;
 let pencil = "brush";
@@ -59,6 +59,24 @@ const loadCanvas = () => {
     // Adiciona a linha de pixels no canvas
     canvas.append(row);
   }
+
+  const newRow = document.querySelectorAll(".row");
+
+  canvas.style.gap = "0px";
+
+  newRow.forEach((e) => {
+    e.style.gap = "0px";
+  });
+
+  if (gridON) {
+    canvas.style.gap = "1px";
+
+    newRow.forEach((e) => {
+      e.style.gap = "1px";
+    });
+  }
+
+  placeholder.innerHTML = `${length}x${length}`;
 };
 
 brush.addEventListener("click", () => {
@@ -80,21 +98,6 @@ const paintingPixel = (pixel) => {
   }
 };
 
-sub.addEventListener("click", () => {
-  if (size.value > 2) {
-    // Impede que o valor fique abaixo de 1
-    size.value = parseInt(size.value) - 1;
-    canvas.innerHTML = ""; // Limpa o canvas atual
-    loadCanvas(); // Recarrega o canvas com o novo tamanho
-  }
-});
-
-add.addEventListener("click", () => {
-  size.value = parseInt(size.value) + 1;
-  canvas.innerHTML = ""; // Limpa o canvas atual
-  loadCanvas(); // Recarrega o canvas com o novo tamanho
-});
-
 size.addEventListener("input", () => {
   canvas.innerHTML = "";
   loadCanvas();
@@ -113,7 +116,7 @@ grid.addEventListener("click", () => {
     });
   } else {
     canvas.style.gap = "0px";
-    
+
     row.forEach((e) => {
       e.style.gap = "0px";
     });
@@ -138,6 +141,9 @@ colors.forEach((e) => {
 
 const downloadCanvas = () => {
   canvas.classList.add("dimensions");
+  if (!gridON) {
+    canvas.style.backgroundColor = "#f5f5f5";
+  }
 
   html2canvas(canvas).then(function (canvas) {
     var imageURL = canvas.toDataURL("image/png");
@@ -149,6 +155,7 @@ const downloadCanvas = () => {
   });
 
   canvas.classList.remove("dimensions");
+  canvas.style.backgroundColor = "#131313";
 };
 
 download.addEventListener("click", downloadCanvas);
