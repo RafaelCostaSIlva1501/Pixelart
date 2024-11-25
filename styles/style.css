@@ -228,4 +228,9 @@ section {
   .box-color div {
     flex-direction: column;
   }
+
+  .input-size {
+    height: 100px;
+    transform: rotate(90deg);
+  }
 }
