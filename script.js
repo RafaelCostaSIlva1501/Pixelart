@@ -8,13 +8,12 @@ const download = document.querySelector(".button-download");
 const selectColor = document.querySelector(".input-color");
 const colors = document.querySelectorAll(".button-color");
 
-const size = document.querySelector(".input-size");
-
 const placeholder = document.querySelector(".placeholder-size");
 
 let isPaiting = false;
 let pencil = "brush";
 let gridON = false;
+let length = 32;
 
 // Função para criar as tags "row" e "pixel"
 const createElement = (tag, className = "") => {
@@ -42,9 +41,6 @@ const createPixel = () => {
 
 // Função para carregar o canvas com uma grade de pixels
 const loadCanvas = () => {
-  // Define o tamanho do canvas com base no valor selecionado pelo usuário
-  const length = size.value;
-
   // Loop externo para criar cada linha de pixels
   for (let i = 0; i < length; i += 1) {
     // Cria um elemento <div> com a classe "row" para representar uma linha
@@ -98,11 +94,6 @@ const paintingPixel = (pixel) => {
   }
 };
 
-size.addEventListener("input", () => {
-  canvas.innerHTML = "";
-  loadCanvas();
-});
-
 grid.addEventListener("click", () => {
   gridON = !gridON;
 
@@ -140,7 +131,6 @@ colors.forEach((e) => {
 });
 
 const downloadCanvas = () => {
-  canvas.classList.add("dimensions");
   if (!gridON) {
     canvas.style.backgroundColor = "#f5f5f5";
   }
@@ -154,7 +144,6 @@ const downloadCanvas = () => {
     link.click();
   });
 
-  canvas.classList.remove("dimensions");
   canvas.style.backgroundColor = "#131313";
 };
 
